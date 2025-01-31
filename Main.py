@@ -23,3 +23,6 @@ x_test = tf.keras.utils.normalize(x_test, axis=1)
 #model.save('handwritten.keras')
 
 model = tf.keras.models.load_model('handwritten.keras')
+loss, accuracy = model.evaluate(x_test, y_test)
+print(loss)
+print(accuracy)
